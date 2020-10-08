@@ -1,0 +1,39 @@
+footer {
+    margin-top: 60px;
+}
+
+.credits {
+    display: flex;
+    justify-content: center;
+    color: #e5e9ed;
+    font-family: Montserrat-Bold;
+    word-spacing: .1em;
+}
+
+span {
+    color: #fb748c;
+}
+
+.social {
+    margin-top: 30px;
+    margin-bottom: 100px;
+    flex-direction: row;
+    text-align: center;
+}
+
+.icon-footer {
+    width: 10px;
+    height: 10px;
+    padding-left: 10px;
+}
+
+.tabs {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.submenu {
+    justify-content: center;
+}

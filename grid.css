@@ -1,0 +1,54 @@
+.containerGrid {
+    width: 80%;
+    margin: 50px auto;
+    background: var(--color-font);
+}
+
+.img-grid {
+    max-width: 100%;
+    display: block;
+    border: solid #f4f4f4 10px;
+}
+
+.masonry-layout {
+    --columns: 3;
+    --gap: 2.5rem;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[var];
+    grid-template-columns: repeat(var(--columns), 1fr);
+    grid-gap: var(--gap);
+}
+
+.masonry-layout .masonry_item {
+    margin-bottom: 1rem;
+}
+
+.masonry-layout.columns-1 {
+    --columns: 3;
+}
+
+.masonry-layout.columns-2 {
+    --columns: 3;
+}
+
+.masonry-layout.columns-3 {
+    --columns: 3;
+}
+
+.masonry-layout.columns-4 {
+    --columns: 3;
+}
+
+.buttonBanner:hover {
+    background: var(--color-primary);
+    color: white;
+    border: 1px solid white;
+}
+
+.buttonBanner:hover a {
+    color: white;
+}
+
+
+/*# sourceMappingURL=grid.css.map */

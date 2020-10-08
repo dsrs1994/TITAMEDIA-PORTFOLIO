@@ -1,0 +1,223 @@
+:root {
+    --color-primary: #fb748c;
+    --color-font: white;
+    --color-alt: #006DC6;
+    --z-back: -10;
+    --z-normal: 1;
+    --z-tooltip: 10;
+    --z-fixed: 100;
+    --z-modal: 1000;
+}
+
+@font-face {
+    font-family: Questrial;
+    src: url(Questrial-Regular.ttf);
+}
+
+@font-face {
+    font-family: Montserrat-Bold;
+    src: url(Montserrat-Bold.ttf);
+}
+
+@font-face {
+    font-family: Montserrat-Thin;
+    src: url(Montserrat-Thin.ttf);
+}
+
+header {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100px;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0;
+    border: 0;
+    background: var(--color-font);
+    opacity: 0.7;
+    z-index: var(--z-modal);
+    top: 0;
+}
+
+.titleHeader {
+    width: 30%;
+    /* border: 1px solid red; */
+    margin: auto;
+    position: relative;
+    text-align: center;
+    align-items: center;
+}
+
+.icon1 {
+    margin: auto;
+}
+
+.navHeader {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+}
+
+.menu {
+    width: 100%;
+    height: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    margin: auto 2rem;
+    padding-right: 4rem;
+    font-family: Questrial;
+}
+
+.menu__item {
+    margin: .5rem;
+    width: 70px;
+    height: 40px;
+    position: relative;
+    display: flex;
+    transition: all .3s ease-in-out;
+}
+
+a,
+.menu__item__link {
+    text-decoration: none;
+    color: black;
+    margin: auto;
+}
+
+.menu__item:hover {
+    background: var(--color-primary);
+    cursor: pointer;
+}
+
+.menu__item:hover .men__item__link {
+    color: var(--color-font);
+}
+
+.icon1 {
+    width: 160px;
+    height: 70px;
+}
+
+.icon2 {
+    width: 20px;
+    height: 20px;
+    margin-top: 10px;
+}
+
+.tabsMobile,
+.menuHamb {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    header {
+        background: pink;
+        position: fixed;
+    }
+    .titleHeader {
+        width: 100%;
+    }
+    .navHeader {
+        display: none;
+    }
+    main,
+    footer {
+        width: 100%;
+    }
+    .menu,
+    .more {
+        display: none;
+    }
+    .tabsM {
+        width: 40%;
+        height: 100%;
+        flex-direction: column;
+        margin-top: 0;
+    }
+    .menuHamb {
+        width: 100%;
+        height: 10%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
+        height: 100px;
+        cursor: pointer;
+        transition: .4s ease-out;
+        margin-top: -5px;
+        margin-right: 30px;
+        padding-left: -5px;
+    }
+    .line1,
+    .line2,
+    .line3 {
+        width: 42px;
+        height: 4px;
+        background: #333;
+        margin: 3px 0;
+        border-radius: 10px;
+        transition: .4s ease-out;
+    }
+    .change1.line1.active {
+        transform: rotate(45deg) translate(-7px, -8px);
+        position: absolute;
+    }
+    .change2.line2.active {
+        opacity: 0;
+    }
+    .change3.line3.active {
+        transform: rotate(-45deg) translate(8px, -7px);
+        position: absolute;
+    }
+    .tabsMobile {
+        position: absolute;
+        width: 100%;
+        height: 90%;
+        margin-top: 100px;
+        top: 0;
+    }
+    .show.tabsMobile.active {
+        display: flex;
+    }
+    .menu {
+        width: 100%;
+        height: 100vh;
+        background: var(--color-font);
+        display: flex;
+        margin: 0;
+        padding: 0;
+        font-size: 20px;
+        flex-direction: column-reverse;
+    }
+    .menuMobile__item {
+        width: 100%;
+        margin: 30px auto;
+        position: relative;
+    }
+    .menuMobile__item,
+    a {
+        text-align: center;
+    }
+    /* ----------------GLIDE SLIDE---------------- */
+    .glide {
+        margin-top: -31px;
+    }
+    .text {
+        font-size: 12px;
+        top: -25px;
+    }
+    .shape {
+        stroke-width: 5px;
+    }
+    .svg-wrapper:hover .shape {
+        -webkit-animation: none;
+        animation: none;
+    }
+    .img-initial {
+        max-width: 320px;
+        max-height: 200px;
+    }
+}

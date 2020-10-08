@@ -17,6 +17,13 @@
 </head>
 
 <body>
+
+    <div class="container-loader">
+        <img class="img-loader" src="cargando.png" alt="logo">
+        <div class="loader">
+        </div>
+    </div>
+
     <header>
         <div class="titleHeader">
             <img class="icon1" src="iconos/logo.png" alt="icon-logo">
@@ -250,7 +257,16 @@
             new Glide('.glide', config).mount()
         }
     </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            let containerL = document.querySelector('.container-loader');
+            containerL.style.display = 'none';
+            containerL.style.opacity = '0';
+        }
+    </script>
 
+    <script type="text/javascript">
+    </script>
 </body>
 
 </html>
